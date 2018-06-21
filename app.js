@@ -79,4 +79,4 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 //     console.log("Server running.........")
 // });
 
-app.listen(5000, () => console.log(`Listening on ${ 5000 }`));
+app.listen(process.env.PORT || 5000);
