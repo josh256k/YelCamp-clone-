@@ -60,8 +60,11 @@ app.use(function(req, res, next){
 
 // Setting up mongoose for our app/
 // mongoose.connect('mongodb://localhost/yelp_camp');
-mongoose.connect("mongodb://yelp:Camp2018@ds263710.mlab.com:63710/yelcamp");
-//mongodb: //<dbuser>:<dbpassword>@ds263710.mlab.com:63710/yelcamp
+// mongoose.connect("mongodb://yelp:Camp2018@ds263710.mlab.com:63710/yelcamp");
+
+
+//SETTING ENVIRONMENT VARIABLE FOR THE DB
+mongoose.connect(process.env.DATABASEURL);
 
 // Acquiring routes
 app.use("/", indexRoutes);
