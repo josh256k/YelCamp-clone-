@@ -26,8 +26,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
 //Setting up the static folder for assets
-// app.use(express.static(__dirname + "/public/"));
-app.use(express.static("."));
+app.use(express.static(__dirname + "/"));
 // seedDB();
 
 // Setting up method override.
