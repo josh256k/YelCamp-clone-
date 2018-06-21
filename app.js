@@ -43,6 +43,7 @@ app.use(require("express-session")({
     saveUninitialized: false
 }));
 
+
 app.use(passport.initialize());
 app.use(passport.session());
 passport.use(new LocalStrategy(User.authenticate()));
@@ -74,6 +75,8 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 //======================================================================================================================
 //Server setup
-app.listen(8080, function(){
-    console.log("Server running.........")
-});
+// app.listen(8080, function(){
+//     console.log("Server running.........")
+// });
+
+app.listen(5000, () => console.log(`Listening on ${ 5000 }`));
